@@ -1,0 +1,40 @@
+#==============================================================================#
+#                           CS 115 Lab 00 Report                               #
+#==============================================================================#
++------------------------------------------------------------------------------+
+| Fill in your name and the Stevens Honor Code pledge on the following lines.  |
+| Failure to fill this in will result in deducted marks.                       |
++------------------------------------------------------------------------------+
+Name: Shrikar Swami
+
+Pledge: I pledge my honor that I have abided by the Stevens Honor System.
+
++------------------------------------------------------------------------------+
+| If you have discussed this assignment with other students in the class, list |
+| them below (write "None" if you worked alone). Additionally, list any        |
+| additional resources you consulted.                                          |
++------------------------------------------------------------------------------+
+Collaborators: None
+
+Sources:
+
++------------------------------------------------------------------------------+
+| List a useful shorcut you've found in IDLE. What is the shortcut, and what   |
+| does it do? How would you accomplish the same thing without the shortcut?    |
++------------------------------------------------------------------------------+
+Put your answer here.
+FN+F5, this shortcut runs your code as well as opens IDLE Shell which is useful for when I test the file in my own program but when I want to run the lab tests and only make tiny changes. Without the shortcut I would just go to the top right of the screen and press run 
+
++------------------------------------------------------------------------------+
+| Did you encounter any problems while doing this assignment? If so, how did   |
+| you resolve them?                                                            |
++------------------------------------------------------------------------------+
+Put your answer here.
+I ran into the issue of writing 'none' instead of 'None' so my program was not working but besides that everything else worked out.
+
++------------------------------------------------------------------------------+
+| Do you have any additional comments about this assignment?                   |
++------------------------------------------------------------------------------+
+Put your answer here.
+Very fun program
+
