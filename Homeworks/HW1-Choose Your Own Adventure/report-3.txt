@@ -1,0 +1,67 @@
+#==============================================================================#
+#                           CS 115 HW 01 Report                               #
+#==============================================================================#
++------------------------------------------------------------------------------+
+| Fill in your name and the Stevens Honor Code pledge on the following lines.  |
+| Writing the code exactly is required for full credit.                        |
++------------------------------------------------------------------------------+
+Name:
+
+Pledge:
+
++------------------------------------------------------------------------------+
+| List the names and emails or classmates you discussed this homework with     |
+| Write "None" if you worked alone.                                            |
+| We hope you collaborate with, discuss, and help classmates.                  |
++------------------------------------------------------------------------------+
+Collaborators:
+
+Sources:
+
++------------------------------------------------------------------------------+
+| Briefly list any sources you consulted outside of the textbook and slides    |
++------------------------------------------------------------------------------+
+Put your answer here.
+
++------------------------------------------------------------------------------+
+| Task 1 Written responses   
++------------------------------------------------------------------------------+
+Put your responses to written questions related to Task 1 here
+
++------------------------------------------------------------------------------+
+| Task 3 Written responses   
++------------------------------------------------------------------------------+
+Put your responses to written questions related to Task 3 here
+
++------------------------------------------------------------------------------+
+| Labor log: Log what you noticed about your experience in the process of      |
+| working on this assignment. While only 2 sentences are *required*, we        |
+| encourage you to reflect more to continue develop awareness of how you learn.|
+| For example, you may choose to include                                       |
+|    - Which strategies and/or resources you used to overcome difficulties     |
+|    - Timing: when you started the homework, how many hours you worked on it  |
+|    - Environment: where you worked on the homework, with whom, etc...        |
+|    - What you will continue and/or do differently for next homework          |
+|    - Which part you're proudest of                                           |
++------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+| Labor log: Log what you noticed about your experience in the process of      |
+| working on this assignment. While only 2 sentences are *required*, we        |
+| encourage you to reflect more to continue develop awareness of how you learn.|
+| For example, you may choose to include                                       |
+|    - Which strategies and/or resources you used to overcome difficulties     |
+|    - Timing: when you started the homework, how many hours you worked on it  |
+|    - Environment: where you worked on the homework, with whom, etc...        |
+|    - What you will continue and/or do differently for next homework          |
+|    - Which part you're proudest of                                           |
++------------------------------------------------------------------------------+
+Put your answer here.
+
+
++------------------------------------------------------------------------------+
+| What else would you like to share about this assignment?                     |
++------------------------------------------------------------------------------+
+Put your answer here.
+
+
