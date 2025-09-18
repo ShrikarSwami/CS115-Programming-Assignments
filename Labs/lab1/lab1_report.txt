@@ -1,0 +1,33 @@
+#==============================================================================#
+#                           CS 115 Lab 01 Report                               #
+#==============================================================================#
++------------------------------------------------------------------------------+
+| Fill in your name and the Stevens Honor Code pledge on the following lines.  |
+| Failure to fill this in will result in deducted marks.                       |
++------------------------------------------------------------------------------+
+Name: Shrikar Swami
+
+Pledge: I pledge my honor that I have abided by the Stevens Honor System.
+
++------------------------------------------------------------------------------+
+| If you have discussed this assignment with other students in the class, list |
+| them below (write "None" if you worked alone). Additionally, list any        |
+| additional resources you consulted.                                          |
++------------------------------------------------------------------------------+
+Collaborators: Ethan Roache
+
+Sources: None
+
++------------------------------------------------------------------------------+
+| Did you encounter any problems while doing this assignment? If so, how did   |
+| you resolve them?                                                            |
++------------------------------------------------------------------------------+
+Put your answer here.
+I didn't initially think to reverse the string at first but then I looked through the notes and saw we used substrings
+
++------------------------------------------------------------------------------+
+| Do you have any additional comments about this assignment?                   |
++------------------------------------------------------------------------------+
+Put your answer here.
+None
+
