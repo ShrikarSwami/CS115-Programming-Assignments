@@ -5,9 +5,9 @@
 | Fill in your name and the Stevens Honor Code pledge on the following lines.  |
 | Writing the code exactly is required for full credit.                        |
 +------------------------------------------------------------------------------+
-Name:
+Name: Shrikar Swami
 
-Pledge:
+Pledge: 
 
 +------------------------------------------------------------------------------+
 | List the names and emails or classmates you discussed this homework with     |
@@ -28,10 +28,13 @@ Put your answer here.
 +------------------------------------------------------------------------------+
 Put your responses to written questions related to Task 1 here
 
+My Story is going to be about a student waking up late for their 8 am class, their goal is to get to class on time and the three types of endings is that they do get to class on time, they get late to their class, or finally they absolutely miss their class and get kicked out of college. Essentially it begins simple when the player realized they only have limited time to get to class so they can choose between getting out of bed, staying in bed, etc and they do the regular preparations until they find out that the building they pass through is under construction and they just work throughout their day to arrive on time!
+
 +------------------------------------------------------------------------------+
 | Task 3 Written responses   
 +------------------------------------------------------------------------------+
 Put your responses to written questions related to Task 3 here
+
 
 +------------------------------------------------------------------------------+
 | Labor log: Log what you noticed about your experience in the process of      |
