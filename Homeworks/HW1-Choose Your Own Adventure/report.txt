@@ -34,9 +34,7 @@ My Story is going to be about a student waking up late for their 8 am class, the
 | Task 3 Written responses   
 +------------------------------------------------------------------------------+
 Put your responses to written questions related to Task 3 here
-1. The program was kind of inconvientn the write because of all the if and else statements and going through the entire program and having to have each list go further and further and having to manage all the paths were really a hassle
-2. I am proud that is works (hopefully) there is a chance that there is a certain path that breaks but hopefully that is not the case but I have a relatively simple story but it does work and I feel like there could've been simpler ways to do it
-3. After my roomate finished the game I'd like to format it more pretty like with spaces to the shell doesn't get cluttered with a ton of line after line after line but like huge spaces between each next prompt so it looks more neat as the user follows the whole game
+
 
 +------------------------------------------------------------------------------+
 | Labor log: Log what you noticed about your experience in the process of      |
@@ -49,7 +47,6 @@ Put your responses to written questions related to Task 3 here
 |    - What you will continue and/or do differently for next homework          |
 |    - Which part you're proudest of                                           |
 +------------------------------------------------------------------------------+
-Writing this program became really messy because of all the if and elif statements, when I started the homework I thought it would be relatively simple to go about but then as I actually started program and started creating each branch that started and then three more and then three more. Basically it took a really long time to program since I had to make sure each path can end the story and keep going.
 
 +------------------------------------------------------------------------------+
 | Labor log: Log what you noticed about your experience in the process of      |
@@ -62,11 +59,12 @@ Writing this program became really messy because of all the if and elif statemen
 |    - What you will continue and/or do differently for next homework          |
 |    - Which part you're proudest of                                           |
 +------------------------------------------------------------------------------+
-After going over it a little I then got a good understanding of the project I then kept going through it I was really just missing out on the fact that I didn't organize the program very well at first. Once I got things in order I also realized I didn't fulfill the requirements of the assignment and to be honest I'm still not entirely sure that I did it 100% correctly but I hope this will suffice.
+Put your answer here.
+
 
 +------------------------------------------------------------------------------+
 | What else would you like to share about this assignment?                     |
 +------------------------------------------------------------------------------+
-I wish it was easier and didn't require me to have a long list of convuluted else and if statements and kind of make it such a messy program. 
+Put your answer here.
 
 

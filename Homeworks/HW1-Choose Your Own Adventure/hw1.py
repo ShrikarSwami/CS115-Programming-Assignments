@@ -1,5 +1,8 @@
 """
-Choose Your Own Adventure: Morning Rush
+Choose Your Own Adventure: Morning Rush because you decided your alarm wasn't important enought
+
+Name: Shrikar Swami
+Pledge: I pledge my honor that I have abided by the Stevens Honor System.
 
 """
 
@@ -247,3 +250,6 @@ def my_story():
     elif user_choice == "c":
         route_c()
 
+
+if __name__ == "__main__":
+    my_story()
