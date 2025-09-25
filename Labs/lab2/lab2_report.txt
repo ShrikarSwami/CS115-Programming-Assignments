@@ -1,0 +1,65 @@
+#==============================================================================#
+#                             CS 115 Lab 2 Report                              #
+#==============================================================================#
++------------------------------------------------------------------------------+
+| Fill in your name and the Stevens Honor Code pledge on the following lines.  |
+| Failure to fill this in will result in deducted marks.                       |
++------------------------------------------------------------------------------+
+Name: Shrikar Swami
+
+Pledge: I pledge my honor that I have abided by the Stevens Honor System. 
+
++------------------------------------------------------------------------------+
+| If you have discussed this assignment with other students in the class, list |
+| them below (write "None" if you worked alone). Additionally, list any        |
+| additional resources you consulted.                                          |
++------------------------------------------------------------------------------+
+Collaborators:
+
+Sources:
+
++------------------------------------------------------------------------------+
+| Task 1: Describe your testing strategy. How did you group possible inputs?   |
+| What are the edge cases?                                                     |
++------------------------------------------------------------------------------+
+I tried some super basic tests, but then I also tried a bunch of super outlandish test like 100, 2000000, etc. This allowed for me to not only find things that should be right but also 
+
++------------------------------------------------------------------------------+
+| Task 1: Which of the provided 5 implementations are correct? For the         |
+| incorrect ones, when do they give the wrong answer?                          |
++------------------------------------------------------------------------------+
+Implantation 1 is wrong because it could accept 13 months
+
+Implentation 2 works!
+
+Implentation 3 works!
+
+Implentation 4 does not work because it does not recognize a valid date as valid
+
+Implantation 5 thinks a nonexistent date exists which is wrong
+
++------------------------------------------------------------------------------+
+| Task 2: Describing *every step you took* to find the mistake in              |
+| vali_date_buggy_but_fixable.                                                 |
++------------------------------------------------------------------------------+
+First I ran my original test cases from the original 5 implementations and I found that novemeber 8th returned as false (that's my birthday) so I then went line by line with 11 as the month and 8 as the day and made sure to focus on which line messed up which happened to be because of a < symbol pointing in the incorrect direction
+
++------------------------------------------------------------------------------+
+| Task 2: Where and what was the mistake in vali_date_buggy_but_fixable?       |
++------------------------------------------------------------------------------+
+The mistake was an incorrect user of a greater than or equal symbol
+
++------------------------------------------------------------------------------+
+| Did you encounter any problems while doing this assignment? If so, how did   |
+| you resolve them?                                                            |
++------------------------------------------------------------------------------+
+Put your answer here.
+I generally could not figure out how to actually run the tests so after figuring it out it was pretty smooth sailing after that 
+
+
++------------------------------------------------------------------------------+
+| Do you have any additional comments about this assignment?                   |
++------------------------------------------------------------------------------+
+Put your answer here.
+
+
