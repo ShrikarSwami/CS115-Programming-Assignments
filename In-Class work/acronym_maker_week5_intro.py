@@ -30,7 +30,7 @@ def acronym_maker(word_list):
     print("Processed words: " + str(processed_words))
     
     # Reduces the processed words to a single string using combine_strings
-    acronym = [] # Remove [] and write your reduce code here
+    acronym = reduce(compile.str,processed-wordds) # Remove [] and write your reduce code here
     
     print("Acronym after reduce: " +  str(acronym))
 
