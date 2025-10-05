@@ -2,9 +2,9 @@
 # Fill in your name and the Stevens Honor Code pledge on the following lines.
 # Failure to fill this in will result in deducted marks.
 #
-# Name:
+# Name: Shrikar Swami
 #
-# Pledge:
+# Pledge: I pledge my honor that I have abided by the Stevens Honor System.
 #
 # === CS 115 Homework 2 ===
 morse = (
@@ -26,7 +26,10 @@ dictionary = ("AM", "AS", "BE", "BED", "CAN", "EGG", "HE", "HER", "HIM",
 #from bigdict import dictionary
 
 def encode(plaintext):
-    pass # Delete this line, and write your own code here instead.
+    plaintext = plaintext.upper() #Converts this to uppercase
+    letters = list(plaintext) #Takes the letters into individual list "HELLO" = ["H","E","L","L","O"]
+    
+    
 
 def decode(cyphertext):
     pass # Delete this line, and write your own code here instead.
