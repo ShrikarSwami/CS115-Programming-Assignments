@@ -55,7 +55,13 @@ def encode(plaintext):
     
 
 def decode(cyphertext):
-    pass # Delete this line, and write your own code here instead.
+    short = ciphertext.strip() #This isn't in the first one but the thing is that all the morse code has to come in with spaces unlike a word the strip command (even tho not nessasary) is being used to make sure there is no spaces at the start of the code
+    items = short.split(" ") #The next line is quite similar in the sense it removes the spaces so that it can create one single string of the code
+    items = tuple(filter(lambda t: t != "", tokens)) #Then what happens is that it creates a list of each individual unique code so that it can then be back translated into whatever it is meant to be
+    letter_iterations = map(lambda line: code_to_letter(line), tokens) #This is the line that actually then finds each comparision and compares like which code has which letter
+    letters = tupple(letters_iterations) #This then turns each indivdiual code into a list item 
+    decoded = "".join(letters) #This is joiining the whole thing into a single word now that each code hasbeen traslated
+    return decoded #This finally is meant to return the decoded text as regular words and whatnot
 
 def matches(cyphertext):
     pass # Delete this line, and write your own code here instead.
