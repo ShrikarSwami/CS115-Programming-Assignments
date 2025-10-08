@@ -28,14 +28,29 @@ def letter_to_code(letter):
         return code #This returns the morse
     return "Error" #This is what happens when nothing is found or it breaks 
 
+def code_to_letter(code): #so above there is the letter_to_code this is like the reverse of that
+    matching_pairs = tuple(filter(lambda pair: pair[0] == code, morse)) #again similar to the first one but what it does it looks for like the codes htat are in the morse list and then removes everything that is not in the word
+    if matching_pair: #Then wiht the matching pairs (that hopefully exist) it begins to "convert" them within this if statement
+        first_pair=matching_pairs[0]
+        code = first_pair[0]
+        return code
+    return "Error"
+#Overally this is very similar to the previous function just swaping what it does 
+
+
+
 # Uncomment one of the following lines to try your code
 # with a larger dictionary of words:
 #from dict import dictionary
 #from bigdict import dictionary
 
 def encode(plaintext):
-    plaintext = plaintext.upper() #Converts this to uppercase
-    letters = list(plaintext) #Takes the letters into individual list "HELLO" = ['H','E','L','L','O']
+    text = plaintext.upper() #Converts whatever the word is to upper case (ik its not nessasary but I am trying to acc think about things like this)
+    letter = tuple(text) #This turns it into a tuple so like "HI" becomes ['H', 'I']
+    codes_iterations = map(lambda ch: letter_to_code(letter), letters) #This line should build an iterator that basically uses the function I wrote earlier to translate each character of the tuple in its Morse counterpart 
+    codes = tuple(codes_iterations) #This actually creates a tuple with the codes so for "HI" it turns it into like ['....', '..'] 
+    encoded_code=" ".join(codes)#This takes the tuple from the line above and makes it an actual line of code like .... ..
+    return encoded_code #just returns the code and whatnot
 
     
 
