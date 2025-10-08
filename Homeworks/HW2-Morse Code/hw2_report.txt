@@ -5,9 +5,9 @@
 | Fill in your name and the Stevens Honor Code pledge on the following lines.  |
 | Failure to fill this in will result in deducted marks.                       |
 +------------------------------------------------------------------------------+
-Name:
+Name: Shrikar Swami
 
-Pledge:
+Pledge: I pledge my honor that I have abided by the Stevens Honor System.
 
 +------------------------------------------------------------------------------+
 | If you have discussed this assignment with other students in the class, list |
@@ -57,7 +57,7 @@ Put your answer here.
 | - Which part you're proudest of |
 +------------------------------------------------------------------------------+
 Put your answer here.
-
+To start I didn't really knwo what to do so I began thinking about equivalcny and also turing each string into a list, essentially in concept I understood that I had to take each string and convert it into a list and then get the morse for each string and then convert it into a single line and then return that line as the finished translation
 +------------------------------------------------------------------------------+
 | What else would you like to share about this assignment? 
 +------------------------------------------------------------------------------+
