@@ -7,7 +7,7 @@
 +------------------------------------------------------------------------------+
 Name: Shrikar Swami
 
-Pledge: I pledge my honor that I have abided by the Stevens Honor System.
+Pledge:I pledge my honor that I have abided by the Stevens Honor System.
 
 +------------------------------------------------------------------------------+
 | If you have discussed this assignment with other students in the class, list |
@@ -21,15 +21,15 @@ Sources:
 +------------------------------------------------------------------------------+
 | Task 4: List the collisions for the following words:                         |
 +------------------------------------------------------------------------------+
-HIVE:
+HIVE: None found with the small dictionary. 
 
-MOOSE:
+MOOSE: None found with the small dictionary.
 
-SIRE:
+SIRE: None found with the small dictionary.
 
-FENCE:
+FENCE: None found with the small dictionary.
 
-ALSO:
+ALSO: None found with the small dictionary.
 
 
 +------------------------------------------------------------------------------+
@@ -42,7 +42,7 @@ Put your answer here.
 | Task 4: Give a word that does not result in a collision after spaces are     |
 | removed.                                                                     |
 +------------------------------------------------------------------------------+
-Put your answer here.
+HE and IS 
 
 
 +------------------------------------------------------------------------------+

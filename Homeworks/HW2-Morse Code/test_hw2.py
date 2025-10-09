@@ -1,6 +1,16 @@
+# === CS 115 Homework 2 ===
+# Fill in your name and the Stevens Honor Code pledge on the following lines.
+# Failure to fill this in will result in deducted marks.
+#
+# Name: Shrikar Swami
+#
+# Pledge:I pledge my honor that I have abided by the Stevens Honor System. 
+#
+# === CS 115 Homework 2 ===
 import hw2
 import unittest
 
+ 
 hw2.dictionary = ("AM", "AS", "BE", "BED", "CAN", "EGG", "HE", "HER", "HIM",
     "HIS", "ILL", "IS", "KID", "ME", "MY", "ON", "OR", "SEE", "SO", "TO",
     "TOE", "TOW", "WAS", "WOW",)
@@ -31,7 +41,11 @@ class TestCases(unittest.TestCase):
     def test_decode_case_1(self):
         # Your test cases should go here.
         # Feel free to create additional methods as needed.
-        pass
+        self.assertEqual(hw2.decode("--. .-.. --- .--"), "GLOW")
+        self.assertEqual(hw2.decode(". -..- .- -- .--. .-.. ."), "EXAMPLE")
+        self.assertEqual(hw2.decode("..-..-"), "?")          # single broken thing
+        self.assertEqual(hw2.decode(". ..-..- ."), "E?E")
+        self.assertEqual(hw2.decode(""), "")
 
     def test_matches_case_1(self):
         inp = "-.-..--."
