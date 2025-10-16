@@ -1,0 +1,53 @@
+#==============================================================================#
+#                             CS 115 Lab 5 Report                              #
+#==============================================================================#
++------------------------------------------------------------------------------+
+| Fill in your name and the Stevens Honor Code pledge on the following lines.  |
+| Failure to fill this in will result in deducted marks.                       |
++------------------------------------------------------------------------------+
+Name: Shrikar Swami
+
+Pledge: I pledge my honor that I have abided by the Stevens Honor System.
+
++------------------------------------------------------------------------------+
+| If you have discussed this assignment with other students in the class, list |
+| them below (write "None" if you worked alone). Additionally, list any        |
+| additional resources you consulted.                                          |
++------------------------------------------------------------------------------+
+Collaborators: Ethan Roache
+
+Sources:
+
++------------------------------------------------------------------------------+
+| 1. How does the coins value change for frames deeper (further down) in the   |
+| stack?                                                                       |
++------------------------------------------------------------------------------+
+The coin list becomes shorter until there is nothing left in it.
+
++------------------------------------------------------------------------------+
+| 2. How does the total value change for frames deeper (further down) in the   |
+| stack?                                                                       |
++------------------------------------------------------------------------------+
+The total value remains the same for the entire program 
+
++------------------------------------------------------------------------------+
+| 3. What was the first return value you observed?                             |
++------------------------------------------------------------------------------+
+The first return value I observed was 1
+
++------------------------------------------------------------------------------+
+| 4 and 5. Code that called the function which returned that return value      |
++------------------------------------------------------------------------------+
+coin_change((5,10,25),25)
+
+
++------------------------------------------------------------------------------+
+| Did you encounter any problems while doing this assignment? If so, how did   |
+| you resolve them?                                                            |
++------------------------------------------------------------------------------+
+I had many problems, I couldn't conceptually think of the code that I had to write to actually achieve this program and it took me a really long time to figure it out even after asking the CA's and my peers (Ethan) 
+
++------------------------------------------------------------------------------+
+| Do you have any additional comments about this assignment?                   |
++------------------------------------------------------------------------------+
+Coding is getting very hard and I think I need to figure out a way to practice programming simple things and get more complicated. 
