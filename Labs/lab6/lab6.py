@@ -15,12 +15,12 @@ def to_int(tup, base): #This is the line defining the function
         return tup[0]*base**(length-1)+ to_int(tup[1:], base) #This is the recursive statement that takes the value, multiply if by the base to the power of whatever the length 
     
 
-def to_base(n, base):
-    if n == 0:
+def to_base(n, base): #This line defines the function
+    if n == 0: #This is a base case that checks if the number is 0
         return (0,)
-    elif n<base:
+    elif n<base: #This is a base case to check if the number is less than the base (meaning not divisible)
         return (n,)
-    else:
+    else: #This is the actual program and what it should do is just keep dividing the number by the base and then keep doing that until you have a tuple with all the values
         tup = []
         quotient = n//base
         remainder = n%base
