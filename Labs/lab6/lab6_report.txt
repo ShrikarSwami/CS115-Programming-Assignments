@@ -23,26 +23,29 @@ Sources:
 +------------------------------------------------------------------------------+
 8*5^3 + 8*5^2 + 6*5^1 + 4*5^0
 
-I divided 1000/5^3
+I divided 1234/5 and get the remainder as well and divide the remainder by 5 and keep doing that until I get a value for each number
 
 +------------------------------------------------------------------------------+
 | Task 4: Showcase the output of to_base(48879, 16) and hex(48879).            |
 | Compare the output of your functions with the output of the built-in. Any    |
 | interesting observations?                                                    |
 +------------------------------------------------------------------------------+
+(11, 14, 14, 15)
+0xbec7
 
+While my to_base function returns a tuple with each multiple of base 16, hex returns the number in hexedecimal format
 
 +------------------------------------------------------------------------------+
 | Task 4: Were your calculations for Task 1 correct? You should use your       |
 | functions to verify them.                                                    |
 +------------------------------------------------------------------------------+
-
+I was returned (1, 4, 4, 1, 4) which is kind of not what I did before so I think I might've done something wrong and my calculations were incorrect
 
 +------------------------------------------------------------------------------+
 | Did you encounter any problems while doing this assignment? If so, how did   |
 | you resolve them?                                                            |
 +------------------------------------------------------------------------------+
-Put your answer here.
+To be honest the to_int function was easy to make and run but the to_base was a lot harder because I needed to think about how to "divide" each number by a certain base^number power
 
 
 +------------------------------------------------------------------------------+
