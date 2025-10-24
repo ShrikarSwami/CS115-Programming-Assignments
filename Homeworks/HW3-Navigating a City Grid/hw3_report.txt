@@ -25,7 +25,8 @@ Sources:
 | 2. Which strategies for correcting your code were the most and least         |
 | effective? (At least 2 sentences)                                            |
 +------------------------------------------------------------------------------+
-Put your answer here.
+1. In order to locate my mistakes, besides like the super obvious incorrect codes which I did just by running it, I had an issue with the increase_column where I incorrectly parsed through it. I solve this by altering the if statements so that rather than checking the rows it checked the columns which is what ultimately fixed my code!
+2. The most effective strategy for correcting my code was definitely just the tests because even when I "ran" my code I would use the tests already created and write them in the HW3 file, the worse method was probably just trying to keep re-running and re-running the code because that honestly was a waste of my time and made me feel stupid.
 
 
 +------------------------------------------------------------------------------+
@@ -38,13 +39,13 @@ Put your answer here.
 | What you're proudest of                                                      |
 |                                                                              |
 +------------------------------------------------------------------------------+
-Put your answer here.
+My labor log was definitely silly because I spent a lot of time procrastinating on this when usually I should be doing it when assigned, I think it might be because I was studying for the exam but even then this would've probably been helpful to do to some capacity. That's all I really have for this
 
 
 
 +------------------------------------------------------------------------------+
 | Do you have any additional comments about this assignment?                   |
 +------------------------------------------------------------------------------+
-Put your answer here.
+I want to make games or something cool like that, visual stuff but I know that's beyond this class
 
 
