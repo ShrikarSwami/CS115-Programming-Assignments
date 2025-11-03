@@ -5,46 +5,52 @@
 | Fill in your name and the Stevens Honor Code pledge on the following lines.  |
 | Failure to fill this in will result in deducted marks.                       |
 +------------------------------------------------------------------------------+
-Name:
+Name: Shrikar Swami
 
-Pledge:
+Pledge: I pledge my honor that I have abided by the Stevens Honor System.
 
 +------------------------------------------------------------------------------+
 | If you have discussed this assignment with other students in the class, list |
 | them below (write "None" if you worked alone). Additionally, list any        |
 | additional resources you consulted.                                          |
 +------------------------------------------------------------------------------+
-Collaborators:
+Collaborators: None 😔
 
-Sources:
+Sources: 
 
 +------------------------------------------------------------------------------+
 | Task 1: How many pixels wide and tall is small_secret_image.ppm?             |
 +------------------------------------------------------------------------------+
 Put your answer here.
 
+5x5
+
 +------------------------------------------------------------------------------+
 | Task 1: How many rows of image data are there? (ignoring the header)      |
 +------------------------------------------------------------------------------+
 Put your answer here.
+
+5
 
 +------------------------------------------------------------------------------+
 | Task 1: How many columns of image data are there? (ignoring the header)      |
 +------------------------------------------------------------------------------+
 Put your answer here.
 
+5
+
 
 +------------------------------------------------------------------------------+
 | Task 1: What are the RGB values of the top-left pixel?                       |
 +------------------------------------------------------------------------------+
 Put your answer here.
-
+The top left pixel is (255,255,255)
 +------------------------------------------------------------------------------+
 | Task 1: Explain as you would to your non-hacker friends how the RGB values  |
 | are encoded in this image format.                                            |
 +------------------------------------------------------------------------------+
 Put your answer here.
-
+The PPM file basically stores colors in text, so the first line would say something like P3 then next gives the width and height of the image, then a max value which is 255. Then after that, each pixel is written as three numbers: Red, Green, and Blue. Like for example, 255 0 0 means a pixel that is purely red because it is in RGB. Each row of numbers represents one row of pixels, os its like a text version of an image grid that Python can read line by line.
 
 +------------------------------------------------------------------------------+
 | Debugging Labor Log (Required): write about                                  |
@@ -54,6 +60,7 @@ Put your answer here.
 | effective? (At least 2 sentences)                                            |
 +------------------------------------------------------------------------------+
 Put your answer here.
+I ran the test_hw4 a bunch of times to see what tests I was failing and the main issue I had was from "\n\r" instead of "\r\n" and I fixed it by checking the expectations and I also printed a small sample image to see how ASCII conversion looks because that was my most favorite one to write out of all the methods
 
 
 +------------------------------------------------------------------------------+
@@ -73,6 +80,7 @@ Put your answer here.
 | you resolve them?                                                            |
 +------------------------------------------------------------------------------+
 Put your answer here.
+The main problem was my line endings \n\r vs \r\n which caused a bunch of failures. Another challenge was trying to remember that the image gets mutated in place, so reusing variables caused confusion. I just kept running it until I figures out what the errors were coming from
 
 
 +------------------------------------------------------------------------------+
