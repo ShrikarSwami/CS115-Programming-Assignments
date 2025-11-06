@@ -45,6 +45,7 @@ method_8: Deep Copy
 | to use? What limitations did you encounter?                                  |
 +------------------------------------------------------------------------------+
 Put your answer here.
+The way I figured it out is by comparing the id because that shows the position in memory and if it is a reference (meaning exact same id and first value), shallow copy (meaning different list value, but same id for first value, or deep copy (where Id was different for everything)
 
 
 +------------------------------------------------------------------------------+
@@ -52,11 +53,14 @@ Put your answer here.
 | you resolve them?                                                            |
 +------------------------------------------------------------------------------+
 Put your answer here.
+Basically the problem I had was I wasn't making a true deep copy like I was going over the first time but then I wasn't going down on a deeper level like 1, 2
 
+For the second I kept messing up the base cases and putting them down as wrong
 
 +------------------------------------------------------------------------------+
 | Do you have any additional comments about this assignment?                   |
 +------------------------------------------------------------------------------+
 Put your answer here.
+That was quite a tiring assignment
 
 
