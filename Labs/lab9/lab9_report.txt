@@ -24,11 +24,11 @@ Sources:
 | you resolve them?                                                            |
 +------------------------------------------------------------------------------+
 Put your answer here.
+I did not have much problems cuz I did osmehtin similar to this before so it was just a question of knowing how to write it in python
 
 
 +------------------------------------------------------------------------------+
 | Do you have any additional comments about this assignment?                   |
 +------------------------------------------------------------------------------+
 Put your answer here.
-
-
+I liked this lab a lot this is probably one of my favorite ones so far
