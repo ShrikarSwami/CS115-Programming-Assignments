@@ -8,13 +8,10 @@ Pledge: I pledge my honor that I have abided by the Stevens Honor System.
 
 
 def get_user_input():
-    """Ask the player for a single letter choice and return it in lowercase with spaces trimmed."""
-    # I ask the user to type a single letter that represents their choice
-    # I  use the exact prompt text that the assignment expects just because cmd c and v is easy!
+    """Ask the player for a single letter choice and return it."""
     letter = input("Type in your action and press <Enter>: ")
-    # I convert the answer to lowercase so that A and a are treated the same (Thanks BAnderson!)
-    # I also trim surrounding spaces so stray spaces do not break the logic (Average Python reference)
-    return letter.lower().strip()
+    return letter
+
 
 
 def print_choices(choice1, choice2, choice3):
@@ -26,17 +23,9 @@ def print_choices(choice1, choice2, choice3):
 
 
 def get_valid_choice():
-    """Repeat reading input until the player types a valid letter which is a or b or c."""
-    # I keep asking for input until the user types a valid option
-    while True:
-        # I read a letter using the helper that already applies the required prompt and cleanup
-        choice = get_user_input()
-        # I accept only a or b or c per the assignment so anything else is invalid
-        if choice in ("a", "b", "c"):
-            # I return the valid letter to the caller
-            return choice
-        # I tell the user what went wrong and I loop to ask again for an actual working input
-        print("Invalid choice. Please type a, b, or c.")
+    """Get one choice from the player, assuming they enter a, b, or c and not an incorrect input"""
+    return get_user_input()
+
 
 
 # -------------- Story Time --------------
@@ -251,5 +240,3 @@ def my_story():
         route_c()
 
 
-if __name__ == "__main__":
-    my_story()

@@ -21,19 +21,59 @@ Sources:
 +------------------------------------------------------------------------------+
 | Briefly list any sources you consulted outside of the textbook and slides    |
 +------------------------------------------------------------------------------+
-Put your answer here.
+I mostly just searched up stuff about if loops on the official python docs
 
 +------------------------------------------------------------------------------+
 | Task 1 Written responses   
 +------------------------------------------------------------------------------+
 Put your responses to written questions related to Task 1 here
 
-My Story is going to be about a student waking up late for their 8 am class, their goal is to get to class on time and the three types of endings is that they do get to class on time, they get late to their class, or finally they absolutely miss their class and get kicked out of college. Essentially it begins simple when the player realized they only have limited time to get to class so they can choose between getting out of bed, staying in bed, etc and they do the regular preparations until they find out that the building they pass through is under construction and they just work throughout their day to arrive on time!
+My story is about a student who wakes up late for school and has to make quick choices in the morning. The first choice is whether to sleep longer, jump out of bed, or hit snooze. Sleeping longer always leads to missing class and a game over. Jumping out of bed opens a set of grooming choices such as showering, brushing teeth, or getting dressed. Some options take too long and make the player late, while others let them leave the dorm fast enough to arrive on time. The goal of the design is to show how small morning decisions can add up to either a win or a game over.
+
++------------------------------------------------------------------------------+
+| Task 2 Written responses   
++------------------------------------------------------------------------------+
+You wake up in the morning and check your alarm clock.
+You are late for school.
+How do you start your morning?
+a) Sleep a little longer
+b) Jump out of bed
+c) Snooze the alarm
+Type in your action and press <Enter>: b
+
+You jump out of bed. What is next?
+a) Take a quick shower
+b) Brush your teeth
+c) Get dressed
+Type in your action and press <Enter>: a
+
+You take a quick shower.
+Final step before you leave?
+a) Take another shower
+b) Brush your teeth
+c) Head to school now
+Type in your action and press <Enter>: b
+
+Clean and minty. Do you change or go?
+a) Change outfits
+b) Check your phone
+c) Head to school now
+Type in your action and press <Enter>: c
+
+You are clean, minty, and presentable.
+You arrive on time to CS 115.
+You win.
+
 
 +------------------------------------------------------------------------------+
 | Task 3 Written responses   
 +------------------------------------------------------------------------------+
 Put your responses to written questions related to Task 3 here
+1. The program mostly behaved the way I expected. Once I ran through all of the branches, I found a few places where the text did not completely match my original diagram, especially around the repeated shower choices, and I fixed those so the story paths line up better.
+
+2. I am proudest of the way the different paths all connect back to the main idea of racing to class on time. Even when the player loses, the endings feel related to the same morning routine instead of random events, and there is at least one clear path that rewards careful choices.
+
+3. After watching another person play, I realized that some prompts needed clearer wording. I changed a few lines so that the choices make it more obvious which ones are risky and which ones are safer, while still keeping a little surprise in the outcomes.
 
 
 +------------------------------------------------------------------------------+
@@ -59,12 +99,14 @@ Put your responses to written questions related to Task 3 here
 |    - What you will continue and/or do differently for next homework          |
 |    - Which part you're proudest of                                           |
 +------------------------------------------------------------------------------+
-Put your answer here.
+I first started this homework right after it was assigned but ended up redoing parts of the story and the code after seeing my initial grade. In total I spent several hours planning the branches, drawing the diagrams, and then rewriting the code to better match the design. I worked mostly in my dorm room with the autograder and my notes open, and I used the feedback to tighten the control flow and docstrings. For the next homework I want to start testing earlier so I have more time to revise before the deadline.
+
 
 
 +------------------------------------------------------------------------------+
 | What else would you like to share about this assignment?                     |
 +------------------------------------------------------------------------------+
 Put your answer here.
+This assignment helped me connect my diagrams to real code and showed me how important clear structure is for interactive programs. It also made me more comfortable separating design work, testing, and reflection instead of trying to do everything at once which is what I lowkey usually do. 
 
 
