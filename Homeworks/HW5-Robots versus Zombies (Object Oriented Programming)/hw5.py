@@ -73,28 +73,167 @@ class Character:
     def __str__(self): #This just represents the character and their health
         return f"{self.name} ({self.health_points} HP)"
 
-    def __lt__(self, loot): #This represents the characters by their remaining health
-        loot_keys = list(loot.keys())
+    def __lt__(self, other):
+        # I want “less than” to just mean “has less health than the other character”
+        return self.health_points < other.health_points
+
 
     def transfer_loot(self, loot): #This moves all items in the loot dict into the current characters inventory
-        loot_keys=list(loot.keys())
+        loot_keys=list(loot.keys()) #Get the keys of the loot dict as a list
 
-        def _transfer(index):
-            if index>= len
+        def _transfer(index): #Helper function to do the transfer recursively
+            if index>= len(loot_keys): #Base case which checks if we are done transferring all items
+                return
+            item = loot_keys[index] #Get the current item to transfer
+            quantity = loot_keys[index] #Get the quantity of the current item
+            quantity = loot.get(item,0) #Get the quantity of the current item in loot
+            if quantity>0: #If there is at least one of the item to transfer 
+                self.inventory[item] = self.inventory.get(item,0)+quantity #Add the quantity to the current character's inventory
+                loot[item]=0 #Set the quantity in loot to 0 since we transferred all of it
+            _transfer(index+1) #Recursive call to transfer the next item
+         
+        _transfer(0) #Start the recursive transfer with index 0
+    
+    def perform_move(self, move):
+        # Grab the item this character is trying to use
+        item = move.item
+        # If I do not have this item (or have zero), I do nothing
+        if self.inventory.get(item, 0) <= 0:
+            return
+        # Figure out who I am hitting
+        target = move.other_character
+        # Normal damage, no special multiplier here
+        damage = item.damage_points
+        # Apply damage and healing
+        target.health_points -= damage
+        self.health_points += item.regeneration_points
+        # If the item is consumable, I use one up
+        if item.is_consumable:
+            self.inventory[item] -= 1
 
     def get_next_move(self, other_characters):
-        """Returns a Move targeting the character with lowest HP using strongest item."""
-        pass  # TODO remove this line and implement
+        # If there is nobody to attack, I just say I have no move
+        if not other_characters:
+            return None
+
+        # Pick the character with the lowest health out of the list
+        target = min(other_characters, key=lambda c: c.health_points)
+
+        # Pick the strongest item I have by damage_points
+        strongest_item = max(self.inventory.keys())
+
+        # Wrap it up in a Move object
+        return Move(target, strongest_item)
+
+    
     # TODO Add other methods here.
 
 # TODO Add other classes here
+class PlayableCharacter(Character):
+    #This is a character controlled by the player
+    def get_user_input(self, other_characters):
+        """
+        Prompts the user to select an item and a target character.
+        Returns a Move object based on the user's choices.
+        """
+        print("Here is oyur inventory!:")
+        print(self.inventory)
+        print("here are the enemies!:")
+        print(other_characters)
+        item_name = input("Enter the name of the item you want to use: ")
+        target_index = int(input("Enter enemey number: "))
+        item = get_inventory_item_from_item_name(item_name, self.inventory)
+        target = other_characters[target_index]
+        return Move(target, item)
+    
+    def get_next_move(self, other_characters):
+        return super().get_next_move(other_characters)
 
+class Robot(Character):
+    # Robot is just a character with a shock baton and special electrical damage
 
+    def __init__(self, name, max_health_points):
+        # Let Character set up name, health, and rusty axe
+        super().__init__(name, max_health_points)
 
+        # Now I create the shock baton item
+        baton = Item("shock baton", 1, 0, "electrical", False)
 
+        # And give myself one baton, added to whatever I already had
+        self.inventory[baton] = self.inventory.get(baton, 0) + 1
 
+    def perform_move(self, move):
+        # Same basic logic as Character.perform_move, but with electrical boost
 
+        item = move.item
 
+        # If I do not actually have this item, I stop here
+        if self.inventory.get(item, 0) <= 0:
+            return
+
+        target = move.other_character
+
+        # Start with the base damage
+        damage = item.damage_points
+
+        # Robots do double damage when the item is electrical
+        if item.damage_type == "electrical":
+            damage *= 2
+
+        # Apply the hit and any regeneration
+        target.health_points -= damage
+        self.health_points += item.regeneration_points
+
+        # Use up the item if it gets consumed
+        if item.is_consumable:
+            self.inventory[item] = self.inventory.get(item, 0) - 1
+
+class Zombie(Character):
+    # Zombie is a character that loves brain grenades and viral damage
+
+    def __init__(self, name, max_health_points):
+        # Let Character handle the basic setup
+        super().__init__(name, max_health_points)
+
+        # Create a viral brain grenade item
+        grenade = Item("brain grenade", 5, 0, "viral", True)
+
+        # Give myself three grenades by default
+        self.inventory[grenade] = self.inventory.get(grenade, 0) + 3
+
+    def get_next_move(self, other_characters):
+        # If there is nobody to attack, I cannot make a move
+        if not other_characters:
+            return None
+
+        # Zombies always attack the first character in the list
+        target = other_characters[0]
+
+        # Use my strongest item
+        strongest_item = max(self.inventory.keys())
+
+        return Move(target, strongest_item)
+
+    def perform_move(self, move):
+        # Similar to Character.perform_move, but viral attacks get doubled
+
+        item = move.item
+
+        if self.inventory.get(item, 0) <= 0:
+            return
+
+        target = move.other_character
+        damage = item.damage_points
+
+        # Zombies do double damage when the item is viral
+        if item.damage_type == "viral":
+            damage *= 2
+
+        target.health_points -= damage
+        self.health_points += item.regeneration_points
+
+        if item.is_consumable:
+            self.inventory[item] = self.inventory.get(item, 0) - 1
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
@@ -122,7 +261,24 @@ def standard_battle(main_character, enemies, enemy_that_will_attack):
     5. If the main_character's health points reach 0, the attacking enemy
        transfers all items from the main_character's inventory.
     """
-    pass
+    if main_character.health_points <= 0 or enemy_that_will_attack.health_points <= 0: #If either character is already defeated, do nothing
+        return #Exit the function early
+
+    move = main_character.get_next_move(enemies) #Get the main character's move
+    if move is None: #If no move is returned, do nothing
+        return #Exit the function early
+    main_character.perform_move(move) #Perform the move
+    target = move.other_character #Get the target of the move so we can check its health
+
+    if target.health_points <= 0: #If the target is defeated, transfer its loot to the main character
+        main_character.transfer_loot(target.inventory) #Then transfer the loot
+    else: #If the target is not defeated, the enemy attacks back
+        enemy_move = enemy_that_will_attack.get_next_move([main_character]) #Get the enemy's move
+        if enemy_move is None: #If no move is returned, do nothing
+            return  #Exit the function early
+        enemy_that_will_attack.perform_move(enemy_move) #Perform the enemy's move
+        if main_character.health_points <= 0: #If the main character is defeated, transfer its loot to the enemy
+            enemy_that_will_attack.transfer_loot(main_character.inventory) #Then transfer the loot
 
 
 def main_game_loop():
