@@ -112,7 +112,7 @@ class Character:
             self.inventory[item] -= 1
 
     def get_next_move(self, other_characters):
-        # If there is nobody to attack, I just say I have no move
+        # If there is nobody to attack, I say I have no move
         if not other_characters:
             return None
 
@@ -122,8 +122,9 @@ class Character:
         # Pick the strongest item I have by damage_points
         strongest_item = max(self.inventory.keys())
 
-        # Wrap it up in a Move object
+        # Wrap it up in a Move object and return it
         return Move(target, strongest_item)
+
 
     
     # TODO Add other methods here.
@@ -147,7 +148,10 @@ class PlayableCharacter(Character):
         return Move(target, item)
     
     def get_next_move(self, other_characters):
-        return super().get_next_move(other_characters)
+        # For the d character I actually want to ask the user
+        return self.get_user_input(other_characters)
+
+
 
 class Robot(Character):
     # Robot is just a character with a shock baton and special electrical damage
@@ -187,6 +191,21 @@ class Robot(Character):
         # Use up the item if it gets consumed
         if item.is_consumable:
             self.inventory[item] = self.inventory.get(item, 0) - 1
+
+    def get_next_move(self, other_characters):
+        # If there is nobody to attack, I cannot make a move
+        if not other_characters:
+            return None
+
+        # Robots always attack the first character in the list
+        target = other_characters[0]
+
+        # I still want to hit as hard as I can, so I pick my strongest item
+        strongest_item = max(self.inventory.keys())
+
+        # Wrap that choice into a Move and return it
+        return Move(target, strongest_item)
+
 
 class Zombie(Character):
     # Zombie is a character that loves brain grenades and viral damage

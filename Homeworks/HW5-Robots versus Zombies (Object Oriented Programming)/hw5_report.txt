@@ -5,9 +5,9 @@
 | Fill in your name and the Stevens Honor Code pledge on the following lines.  |
 | Failure to fill this in will result in deducted marks.                       |
 +------------------------------------------------------------------------------+
-Name:
+Name: Shrikar Swami
 
-Pledge:
+Pledge: I pledge my honor that I have abided by the Stevens Honor System.
 
 +------------------------------------------------------------------------------+
 | If you have discussed this assignment with other students in the class, list |
@@ -23,12 +23,15 @@ Sources:
 | contstructor. Show your one line of code here.                               |
 +------------------------------------------------------------------------------+
 Put your answer here.
+healing_potion = Item("healing potion", 0, 5, "healing", True)
 
 +------------------------------------------------------------------------------+
 | Task 1: Copy and paste the result of calling print on your item with an      |
 | overridden __str__ into the report.                                          |
 +------------------------------------------------------------------------------+
 Put your answer here.
+print(healing_potion)
+Name: healing potion, Damage: 0, Regen: 5
 
 
 +------------------------------------------------------------------------------+
@@ -36,6 +39,9 @@ Put your answer here.
 | character here that you get by running get_next_move.                        |
 +------------------------------------------------------------------------------+
 Put your answer here.
+Move:
+    Item: Name: rusty axe, Damage: 1, Regen: 0
+    Target character: little cubebot (1 HP)
 
 
 +------------------------------------------------------------------------------+
@@ -43,6 +49,7 @@ Put your answer here.
 | default Character class?                                                     |
 +------------------------------------------------------------------------------+
 Put your answer here.
+My custom classes Robot and Zombie both inherit from Character but change how battles work. Robot starts with a shock baton and does double damage whenever it uses an electrical item. Zombie starts with several brain grenades that are viral and does double damage with viral attacks. I also created PlayableCharacter, which asks the user which item and enemy to choose, instead of automatically picking a target. All of them still reuse the basic Character attributes like name, health, and inventory.
 
 
 +------------------------------------------------------------------------------+
@@ -50,6 +57,7 @@ Put your answer here.
 | set it up?                                                                   |
 +------------------------------------------------------------------------------+
 Put your answer here.
+Yes, I was able to defeat all of the enemies I created. Starting with more health and making smart choices about which item to use on which enemy lets the player win consistently. The extra items I gave to Robot and Zombie make the fights more interesting, but the player can still win with careful play. I'm probaly one of the greatest players at this game.
 
 +------------------------------------------------------------------------------+
 | Task 5: Playtesting report: can you defeat all enemies in the game as you    |
@@ -64,12 +72,40 @@ Put your answer here.
 | your code.                                                                   |
 +------------------------------------------------------------------------------+
 Put your answer here.
+Yes, I was able to defeat all of the enemies I created. Starting with more health and making smart choices about which item to use on which enemy lets the player win consistently. The extra items I gave to Robot and Zombie make the fights more interesting, but the player can still win with careful play.
 
 +------------------------------------------------------------------------------+
 | Task 5: Copy and paste the outputs that result from at least 3 rounds of     |
 | running the main_game_loop in your game                                      |
 +------------------------------------------------------------------------------+
 Put your answer here.
+Main character info: player (15 HP)
+Here is oyur inventory!:
+{Name: rusty axe, Damage: 1, Regen: 0: 1}
+here are the enemies!:
+[<Character little cubebot (1 HP)>, <Character armor cube (2 HP)>]
+Enter the name of the item you want to use: rusty axe
+Enter enemey number: 0
+Your stats: player (15 HP)
+
+Main character info: player (15 HP)
+Here is oyur inventory!:
+{Name: rusty axe, Damage: 1, Regen: 0: 2}
+here are the enemies!:
+[<Character armor cube (2 HP)>]
+Enter the name of the item you want to use: rusty axe
+Enter enemey number: 0
+Your stats: player (14 HP)
+
+Main character info: player (14 HP)
+Here is oyur inventory!:
+{Name: rusty axe, Damage: 1, Regen: 0: 2}
+here are the enemies!:
+[<Character armor cube (1 HP)>]
+Enter the name of the item you want to use: rusty axe
+Enter enemey number: 0
+Your stats: player (14 HP)
+You win!
 
 +------------------------------------------------------------------------------+
 | Debugging Labor Log (Required): write about                                  |
@@ -80,6 +116,9 @@ Put your answer here.
 +------------------------------------------------------------------------------+
 Put your answer here.
 
+I used the provided test_hw5.py file as my main way to locate mistakes in my code. When tests failed, I read the error messages and went back to the corresponding method to see what was wrong. I also printed out character health and inventories in a few places to check that transfer_loot and perform_move were doing what I expected.
+
+The most effective strategy was running the tests often and fixing one failure at a time. Reading the pdf carefully and comparing the behavior described there against my code also helped a lot. The least effective strategy was guessing at changes without re reading the instructions, because that sometimes created new bugs instead of fixing the old ones.
 
 +------------------------------------------------------------------------------+
 | Optional Labor Log: To develop awareness of your software dev process,       |
@@ -92,12 +131,15 @@ Put your answer here.
 |                                                                              |
 +------------------------------------------------------------------------------+
 Put your answer here.
+I started this homework a few days before the deadline and worked on it in several sessions. Most of the time I was coding in my room on my laptop. For the next homework I want to start a bit earlier so I have more time to playtest and add extra features. I am proud that I got robots and zombies working and that I can actually play my own tiny game in the Python shell.
 
 +------------------------------------------------------------------------------+
 | Did you encounter any problems while doing this assignment? If so, how did   |
 | you resolve them?                                                            |
 +------------------------------------------------------------------------------+
 Put your answer here.
+One big problem I ran into was getting standard_battle to behave exactly like the description in the pdf. At first I mixed up the order of the steps and forgot to transfer loot when a character was defeated. I fixed this by going through each step in the assignment and matching them one by one in my code until the logic lined up.
+I also had trouble writing transfer_loot without any loops. My first instinct was to use a for loop, but that was not allowed, so I rewrote it using a small recursive helper function that walks through the list of keys.
 
 
 +------------------------------------------------------------------------------+
@@ -106,3 +148,4 @@ Put your answer here.
 Put your answer here.
 
 
+I liked that this assignment let me mix object oriented programming with a simple game. It was fun to give my robots and zombies different behaviors and see them interact in battles. 
