@@ -99,15 +99,17 @@ class Manager(Employee):
 
     #Reassign all of this manager's reports to another employee.
     def reassign(self, new_manager):
-        current_reports = list(self.reports)
+        if not self.reports:
+            return
 
-        for emp in current_reports:
-            if isinstance(new_manager, Manager):
-                new_manager.assign(emp)
-            else:
-                emp.manager = new_manager
+        emp = self.reports.pop()
 
-        self.reports.clear()
+        if isinstance(new_manager, Manager):
+            new_manager.assign(emp)
+        else:
+            emp.manager = new_manager
+
+        self.reassign(new_manager)
         
     
         

@@ -11,9 +11,20 @@ import random
 
 class Item:
     """
-    Fill in description here
+    This represents an in game item that can either deal damage or regenerate health.
     """
     # TODO Define constructor here
+    #The todo just creates the items with all the required properties
+    def __init__(self, name, damage_points, regeneration_points, damage_type, is_consumable):
+        self.name = name
+        self.damage_points = damage_points
+        self.regeneration_points = regeneration_points
+        self.damage_type = damage_type
+        self.is_consumable = is_consumable
+
+    def __str__(self):
+        #Returns a short human readable description of the item.
+        return f"Name: {self.name}, Damage: {self.damage_points}, Regen: {self.regeneration_points}"
 
     def __lt__(self, other):
         """ DO NOT CHANGE THIS FUNCTION UNLESS YOU 100% KNOW WHAT YOU ARE DOING """
@@ -50,13 +61,26 @@ class Move:
         """ pretty prints Move. Do not change, but you can use as an example """
         return "Move: " + "\r\n" + "    Item: " + str(self.item) + "\r\n" + "    Target character: " + str(self.other_character)
 
-
+#-----------------------------------------------------------------------------------------------------------------------------------
 class Character:
     def __init__(self, name, max_health_points):
-        pass #TODO remove this line and implement
+        self.name = name
+        self.health_points = max_health_points
+        self.inventory = {}
+        rusty_axe = Item("rusty axe", 1, 0, "physical", False)
+        self.inventory[rusty_axe] = 1
 
-    def __str__(self):
-        pass #TODO remove this line and implement
+    def __str__(self): #This just represents the character and their health
+        return f"{self.name} ({self.health_points} HP)"
+
+    def __lt__(self, loot): #This represents the characters by their remaining health
+        loot_keys = list(loot.keys())
+
+    def transfer_loot(self, loot): #This moves all items in the loot dict into the current characters inventory
+        loot_keys=list(loot.keys())
+
+        def _transfer(index):
+            if index>= len
 
     def get_next_move(self, other_characters):
         """Returns a Move targeting the character with lowest HP using strongest item."""
@@ -64,6 +88,15 @@ class Character:
     # TODO Add other methods here.
 
 # TODO Add other classes here
+
+
+
+
+
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------
 
 def spawn_enemies():
     """
