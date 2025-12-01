@@ -113,24 +113,29 @@ if __name__ == '__main__':
     pass
     # sample informal tests. Uncomment to run
 
-    # print(first_even_index([1, 3, 5, 8, 10]))
+    print(first_even_index([1, 3, 5, 8, 10]))
     # expected: 3
 
-    # words = ["cat", "hi", "dog", "sun", "ok"]
-    # print(pop_three_letter_words(words))
+    words = ["cat", "hi", "dog", "sun", "ok"]
+    print(pop_three_letter_words(words))
     # expected: 3   # "cat", "dog", "sun"
 
-    # print(sum_of_squares(5))
+    print(sum_of_squares(5))
     # expected: 55
 
-    # print(collatz_steps(6))
+    print(collatz_steps(6))
     # expected: 8
 
-    # print(my_map(lambda x: x * 2, [1, 2, 3]))
+    print(my_map(lambda x: x * 2, [1, 2, 3]))
     # expected: [2, 4, 6]
 
-    # print(my_filter(lambda x: x % 2 == 0, [1, 2, 3, 4]))
+    print(my_filter(lambda x: x % 2 == 0, [1, 2, 3, 4]))
     # expected: [2, 4]
 
     # print(
+    grid = [[5, 0, 2],
+            [1, 2, 0],
+            [10, 2, 0]]
+    print(max_value_in_each_row(grid))
+    # expected: [5, 2, 10]
 
