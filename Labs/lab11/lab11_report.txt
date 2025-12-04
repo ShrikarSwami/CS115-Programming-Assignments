@@ -1,0 +1,86 @@
+#==============================================================================#
+#                           CS 115 Lab 11 Report                               #
+#==============================================================================#
++------------------------------------------------------------------------------+
+| Fill in your name and the Stevens Honor Code pledge on the following lines.  |
+| Failure to fill this in will result in deducted marks.                       |
++------------------------------------------------------------------------------+
+Name: Shrikar Swami
+
+Pledge: I pledge my honor that I have abided by the Stevens Honor System.
+
++------------------------------------------------------------------------------+
+| If you have discussed this assignment with other students in the class, list |
+| them below (write "None" if you worked alone). Additionally, list any        |
+| additional resources you consulted.                                          |
++------------------------------------------------------------------------------+
+Collaborators:
+
+Sources:
+
++------------------------------------------------------------------------------+
+| Mistake 1: Copy and paste your stack trace for mistake 1 here.               |
+| It should be similar to the stack trace on the handout.                      |
++------------------------------------------------------------------------------+
+Put your answer here.
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/home/oai/share/lab11.py", line 76, in compute_total_regeneration_points_in_inventory
+    total += item_quantity * item.regeneration_points
+TypeError: 'int' object is not iterable
+
++------------------------------------------------------------------------------+
+| Mistake 1: What is the most recent line of code run when the error occured?  |
++------------------------------------------------------------------------------+
+Put your answer here.
+The error happens on the line where the code is trying to accumulate the regeneration points:
+total += item_quantity * item.regeneration_points
+
++------------------------------------------------------------------------------+
+| Mistake 1: What function was calling that function?                          |
++------------------------------------------------------------------------------+
+Put your answer here.
+The line is in compute_total_regeneration_points_in_inventory which was called from the top level code 
+
++------------------------------------------------------------------------------+
+| Mistake 1: Explain in your own words what the error means                    |
++------------------------------------------------------------------------------+
+Put your answer here.
+Python basically tried to use += to add an integer value into a list accumulator so total was initialized as a list and when a list if using += ion python it expects the right to be an utterable value so that its contents can be concatenated onto the list. Because item_quantity becomes and int Python cannot iterate which leads to the error we got. 
+
++------------------------------------------------------------------------------+
+| Mistake 2: Copy and paste your stack trace for mistake 2 here.               |
++------------------------------------------------------------------------------+
+Put your answer here.
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/home/oai/share/lab11.py", line 84, in compute_total_regeneration_points_in_inventory
+    total += item_quantity * item.regeneration_points
+TypeError: unsupported operand type(s) for +=: 'int' and 'tuple'
+
++------------------------------------------------------------------------------+
+| Mistake 2: What is the most recent line of code run when the error occured?  |
++------------------------------------------------------------------------------+
+Put your answer here.
+The failure again happens at the accumulation step inside compute_total_regeneration_points_in_inventory:
+total += item_quantity * item.regeneration_points.
+
++------------------------------------------------------------------------------+
+| Mistake 2: What function was calling that function?                          |
++------------------------------------------------------------------------------+
+Put your answer here.
+it’s still inside compute_total_regeneration_points_in_inventory, called by the main code.
+
++------------------------------------------------------------------------------+
+| Mistake 2: Explain in your own words what the error means                    |
++------------------------------------------------------------------------------+
+Put your answer here.
+This time total is an integer, which is correct. But one of the items, "ginger", has its regeneration_points stored as a tuple (10,) instead of just 10. When Python multiplies a tuple by a number, it stays a tuple. So it tries to do total += (tuple), which doesn’t work because you can’t add a tuple to an integer. You need to change (10,) to 10, or otherwise convert it to a number.
+
+
++------------------------------------------------------------------------------+
+| Do you have any additional comments about this assignment?                   |
++------------------------------------------------------------------------------+
+Put your answer here.
+
+
